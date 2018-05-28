@@ -44,32 +44,32 @@
         <form id="login-form">
             <div class="row">
                 <div class="input-field col s12 center">
-                    <h5 class="center login-form-text">Dashboard</h5>
+                    <h5 class="center login-form-text">控制面板</h5>
                 </div>
             </div>
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_box</i>
                     <input id="log" type="text" name="log">
-                    <label for="log">Username/email</label>
+                    <label for="log">用户名或者邮箱</label>
                 </div>
             </div>
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
                     <input id="password" type="password" name="password">
-                    <label for="password">Password</label>
+                    <label for="password">密码</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 m12 l12" style="margin-left: -6px !important; margin-top: -6px">
                     <input type="checkbox" id="remember-me" class="filled-in" name="remember"/>
-                    <label for="remember-me">Remember me</label>
+                    <label for="remember-me">记住密码</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <button type="submit" class="btn waves-effect waves-light col s12">Login
+                    <button type="submit" class="btn waves-effect waves-light col s12">登陆
                         <div class="preloader-wrapper right">
                             <div class="spinner-layer spinner-red-only">
                                 <div class="circle-clipper left">

@@ -1,132 +1,60 @@
-# Materialize Blog
+<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-A new blog management system designed according to Google [Material Design](https://www.google.com/design/spec/material-design/introduction.html).
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-Back-end base on [Laravel 5.3](https://laravel.com), a PHP application framework with expressive, elegant syntax.
+## About Laravel
 
-Front-end built with [Vue](https://vuejs.org), a Progressive JavaScript Framework bring data binding to js.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-Demo at [Forehalo' blog](https://forehalo.me).
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-## Feature
+Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
 
-* Single page
-* Creating with markdown (Javascript parser: [marked](https://github.com/chjj/marked), PHP parser: [parsedown](https://github.com/erusev/parsedown))
-* Code highlight ([Prism](http://prismjs.com))
-* Self host comments
-* Easy localization
-* Use [sw-precache](https://github.com/GoogleChrome/sw-precache) to cache static assets.
+## Learning Laravel
 
-## Install
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
 
-### Project
+If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
-The php package manager [`composer`](https://getcomposer.org/) is required for installing.
+## Laravel Sponsors
 
-```
-composer create-project forehalo/materialize-blog blog
-```
+We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
 
-It will automatically install laravel and other dependencies for you. 
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[British Software Development](https://www.britishsoftware.co)**
+- [Fragrantica](https://www.fragrantica.com)
+- [SOFTonSOFA](https://softonsofa.com/)
+- [User10](https://user10.com)
+- [Soumettre.fr](https://soumettre.fr/)
+- [CodeBrisk](https://codebrisk.com)
+- [1Forge](https://1forge.com)
+- [TECPRESSO](https://tecpresso.co.jp/)
+- [Runtime Converter](http://runtimeconverter.com/)
+- [WebL'Agence](https://weblagence.com/)
+- [Invoice Ninja](https://www.invoiceninja.com)
 
-> Or you can install from this git repository manually
-> ```
-> git clone https://github.com/forehalo/materialize-blog.git blog
-> cd blog && composer install
-> cp .env.example .env
-> php artisan key:generate
-> ```
+## Contributing
 
-Ensure you have finish all the steps mentioned in [`laravel docs`](https://laravel.com/docs/5.3/installation).
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-Next step, migrate tables and seed fakers
+## Security Vulnerabilities
 
-```
-php artisan migrate
-php artisan db:seed
-```
-
-> The `db:seed` command will seed `admin` and `settings` table. If you want to pre-generate some mock data, run again with option `--class=BlogSeeder`
-
-Now you can login dashboard at `/dashboard` with name `admin` or email `admin@example.com`, password `admin`.
-
-### Images
-
-Maybe you want to store all images to local, it gives you an simple way.
-
-Create an symbolic link `public/storage` target `storage/app/public`folder.
-
-```
-ln -s /path/to/storage/app/public/ public/storage
-```
-
-So now, you can upload images and get it with url `example.com/storage/images/image.jpg`. All images stored in `storage/app/public/images` folder.
-
-## Pages
-
-Materialize-blog also provide a way to publish pages. What you need to do is just writing a markdown file and store it under `storage/pages` folder. Then, you can access it by url `https://example.com/pages/{name}`, `name` is the markdown file name without extension `.md`. There is an existent page named `about`. Try it out.
-
-## Custom
-
-All front-end assets has been compiled so you could directly use them without compiling manually.
-
-But if you don't like the default theme, hm... OK, install front-end environment and DIY.
-
-```
-yarn install    // or "npm install"
-```
-
-`yarn` is another package manager like `npm`, [read more](https://yarnpkg.com/en/docs/). 
-
-Resources are putted in `/resources` folder.
-```
-├─assets
-│  ├─fonts
-│  │  └─material-design-icons        ------ icon files
-│  ├─js                              ------ js workspace
-│  │  ├─blog                           ------ user entery
-│  │  │  ├─archives
-│  │  │  ├─navigations
-│  │  │  ├─pages
-│  │  │  └─posts
-│  │  ├─components                     ------ global components
-│  │  └─dashboard                      ------ dashboard entery
-│  │      ├─posts
-│  │      └─settings
-│  └─sass                            ------ sass workspace
-│      ├─blog
-│      └─dashboard
-├─lang                               ------ language dictionary
-│  ├─en
-│  └─zh-CN
-└─views
-    ├─auth
-    ├─blog
-    └─dashboard
-```
-
-### Style & Script
-
-run the following command after install all dependencies. This will watch all assets files, and auto-compile when change saved.
-
-Before working, ensure you know well about [Vue](https://vuejs.org) and [Sass](http://sass-lang.com).
-
-```
-yarn run dev
-```
-
-### Language
-
-You can esaily add another language support by adding a subfolder in `resources/lang`. Every file returns a php array. Copy and translate all the files.
-
-> Dictionary used by Vue should be putted in `resources/lang/your_lang/app.php`
-
-Modify the `locale` item value to your default language folder name in `config/app.php`. Done!
-
-Then, use `trans()` global helper function in PHP, and `this.$trans()` in Vue components.
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2015-2017 Forehalo
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

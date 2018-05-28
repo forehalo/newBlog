@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard/posts/{id}/export', 'Api\PostController@export');
     Route::any('/dashboard/{any}', 'Controller@dashboard')->where('any', '.*');
 });
-
+// 添加的小说
+Route::get('/read.asp', 'XiaoShuoController@read');
 // Must be placed below other routes.
 Route::any('/{any}', 'Controller@index')->where('any', '.*');
