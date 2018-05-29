@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -12,12 +10,10 @@ return [
     | as required, but they're a perfect start for most applications.
     |
     */
-
     'defaults' => [
         'guard' => 'api',
         'passwords' => 'users',
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -34,14 +30,12 @@ return [
     | Supported: "session", "token"
     |
     */
-
     'guards' => [
         'api' => [
             'driver' => 'session',
             'provider' => 'admins',
         ]
     ],
-
     /*
     |--------------------------------------------------------------------------
     | User Providers
@@ -58,14 +52,12 @@ return [
     | Supported: "database", "eloquent"
     |
     */
-
     'providers' => [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords
@@ -80,7 +72,6 @@ return [
     | they have less time to be guessed. You may change this as needed.
     |
     */
-
     'passwords' => [
         'users' => [
             'provider' => 'users',
@@ -88,5 +79,4 @@ return [
             'expire' => 60,
         ],
     ],
-
 ];

@@ -30,6 +30,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard/posts/{id}/export', 'Api\PostController@export');
     Route::any('/dashboard/{any}', 'Controller@dashboard')->where('any', '.*');
 });
-
 // Must be placed below other routes.
 Route::any('/{any}', 'Controller@index')->where('any', '.*');
