@@ -1,7 +1,12 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "forehalo/materialize-blog",
+    "description": "A new blog management system disigned according to Google Material Design.",
+    "keywords": [
+        "material Design",
+        "blog",
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {

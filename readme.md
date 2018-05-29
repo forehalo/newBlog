@@ -8,7 +8,9 @@ Front-end built with [Vue](https://vuejs.org), a Progressive JavaScript Framewor
 
 Demo at [Forehalo' blog](https://forehalo.me).
 
-由 [`xyj2156`](https://blog.xyj2156.top) 升级至 5.6 正在进行中……
+由 [`xyj2156`](https://blog.xyj2156.top) 升级至 5.6.21
+
+2018年5月29日 10:05:20 bug 排除 
 
 ## Feature
 
